@@ -8,10 +8,9 @@ SUMMARY="Ruby GDK3 bindings"
 DESCRIPTION="Ruby/GDK3 is a Ruby binding of GDK-3.x."
 HOMEPAGE="http://ruby-gnome2.sourceforge.jp/"
 
-PKG_NAMES="${NAME} ${NAME}-devel ${NAME}-doc"
-ruby_gdk3_CONTENTS="--exclude=sample ${RUBYGEM_EXTDIR#/} ${RUBYGEM_INSTDIR#/} ${RUBYGEM_SPEC#/}"
-ruby_gdk3_devel_REQUIRES="${NAME} ruby-glib2-devel libgtk3-devel"
-ruby_gdk3_devel_CONTENTS="usr/include/ usr/lib/lib*.a usr/lib/pkgconfig/"
-ruby_gdk3_doc_CONTENTS=${RUBYGEM_DOCDIR#/}
+ARCH=noarch
 
-DEPS_PATH="${RUBYGEM_EXTDIR%/*}/cairo-1*:${RUBYGEM_EXTDIR%/*}/glib2-${VERSION}"
+PKG_NAMES="${NAME} ${NAME}-doc"
+ruby_gdk3_OBSOLETES="${NAME}-devel"
+ruby_gdk3_CONTENTS="--exclude=sample ${RUBYGEM_INSTDIR#/} ${RUBYGEM_SPEC#/}"
+ruby_gdk3_doc_CONTENTS=${RUBYGEM_DOCDIR#/}
