@@ -11,7 +11,7 @@ HOMEPAGE="http://ruby-gnome2.sourceforge.jp/"
 ARCH=noarch
 
 PKG_NAMES="${NAME} ${NAME}-doc"
-ruby_gdk3_OBSOLETES="${NAME}-devel"
+ruby_gdk3_OBSOLETES="${NAME}-devel ${NAME}-debuginfo"
 ruby_gdk3_REQUIRES="girepository-Gtk3.0"
 ruby_gdk3_CONTENTS="--exclude=sample ${RUBYGEM_INSTDIR#/} ${RUBYGEM_SPEC#/}"
 ruby_gdk3_doc_CONTENTS=${RUBYGEM_DOCDIR#/}
